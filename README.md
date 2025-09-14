@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![](Home.png)
+![](Home.svg)
 
 <img alt="Python" src="https://img.shields.io/badge/Python-3.8+-blue.svg">
 <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-2.8+-orange.svg">
