@@ -1,0 +1,100 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con gradiente -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a148c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg-gradient)" rx="15" ry="15" />
+  
+  <!-- Título del proyecto -->
+  <text x="400" y="60" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">RoadSigns Classification</text>
+  <text x="400" y="100" font-family="Arial, sans-serif" font-size="20" fill="#e0e0e0" text-anchor="middle">Deep Learning for Traffic Sign Recognition</text>
+  
+  <!-- Señales de tráfico -->
+  <!-- Señal de Stop -->
+  <g transform="translate(150, 200)">
+    <polygon points="0,-60 42.4,-42.4 60,0 42.4,42.4 0,60 -42.4,42.4 -60,0 -42.4,-42.4" fill="#d32f2f" stroke="white" stroke-width="3" />
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle">STOP</text>
+  </g>
+  
+  <!-- Señal de límite de velocidad -->
+  <g transform="translate(320, 200)">
+    <circle cx="0" cy="0" r="60" fill="white" stroke="#d32f2f" stroke-width="5" />
+    <circle cx="0" cy="0" r="50" fill="#d32f2f" />
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">80</text>
+  </g>
+  
+  <!-- Señal de curva -->
+  <g transform="translate(490, 200)">
+    <polygon points="0,-60 60,-60 60,60 0,60" fill="#ffeb3b" stroke="black" stroke-width="3" />
+    <path d="M 15 0 Q 30 -30 45 0" stroke="black" stroke-width="8" fill="none" />
+  </g>
+  
+  <!-- Señal de paso de peatones -->
+  <g transform="translate(650, 200)">
+    <rect x="-50" y="-50" width="100" height="100" fill="#2196f3" />
+    <g transform="scale(0.6)">
+      <path d="M 0,-30 A 15,15 0 0,1 0,-60 A 15,15 0 0,1 0,-30 Z" fill="white" />
+      <path d="M 0,-30 L -10,30 L 10,30 Z" fill="white" />
+    </g>
+  </g>
+  
+  <!-- Red neuronal -->
+  <g transform="translate(400, 320)">
+    <!-- Conexiones -->
+    <!-- Capa 1 a 2 -->
+    <line x1="-150" y1="-40" x2="-50" y2="-40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-150" y1="-40" x2="-50" y2="0" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-150" y1="-40" x2="-50" y2="40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-150" y1="0" x2="-50" y2="-40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-150" y1="0" x2="-50" y2="0" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-150" y1="0" x2="-50" y2="40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-150" y1="40" x2="-50" y2="-40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-150" y1="40" x2="-50" y2="0" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-150" y1="40" x2="-50" y2="40" stroke="#64ffda" stroke-width="1.5" />
+    
+    <!-- Capa 2 a 3 -->
+    <line x1="-50" y1="-40" x2="50" y2="-40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-50" y1="-40" x2="50" y2="0" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-50" y1="-40" x2="50" y2="40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-50" y1="0" x2="50" y2="-40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-50" y1="0" x2="50" y2="0" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-50" y1="0" x2="50" y2="40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-50" y1="40" x2="50" y2="-40" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-50" y1="40" x2="50" y2="0" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="-50" y1="40" x2="50" y2="40" stroke="#64ffda" stroke-width="1.5" />
+    
+    <!-- Capa 3 a 4 -->
+    <line x1="50" y1="-40" x2="150" y2="-20" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="50" y1="-40" x2="150" y2="20" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="50" y1="0" x2="150" y2="-20" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="50" y1="0" x2="150" y2="20" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="50" y1="40" x2="150" y2="-20" stroke="#64ffda" stroke-width="1.5" />
+    <line x1="50" y1="40" x2="150" y2="20" stroke="#64ffda" stroke-width="1.5" />
+    
+    <!-- Neuronas -->
+    <!-- Capa 1 (entrada) -->
+    <circle cx="-150" cy="-40" r="10" fill="#ff9800" />
+    <circle cx="-150" cy="0" r="10" fill="#ff9800" />
+    <circle cx="-150" cy="40" r="10" fill="#ff9800" />
+    
+    <!-- Capa 2 (oculta 1) -->
+    <circle cx="-50" cy="-40" r="10" fill="#ff9800" />
+    <circle cx="-50" cy="0" r="10" fill="#ff9800" />
+    <circle cx="-50" cy="40" r="10" fill="#ff9800" />
+    
+    <!-- Capa 3 (oculta 2) -->
+    <circle cx="50" cy="-40" r="10" fill="#ff9800" />
+    <circle cx="50" cy="0" r="10" fill="#ff9800" />
+    <circle cx="50" cy="40" r="10" fill="#ff9800" />
+    
+    <!-- Capa 4 (salida) -->
+    <circle cx="150" cy="-20" r="10" fill="#ff9800" />
+    <circle cx="150" cy="20" r="10" fill="#ff9800" />
+  </g>
+  
+  <!-- Texto inferior -->
+  <text x="400" y="380" font-family="Arial, sans-serif" font-size="14" fill="#e0e0e0" text-anchor="middle">Powered by TensorFlow • OpenCV • Deep Learning</text>
+</svg>
